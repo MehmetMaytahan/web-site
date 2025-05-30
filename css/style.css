@@ -48,11 +48,25 @@ body {
   overflow-y: auto;
   z-index: 0;
 
+  transition: all 0.3s ease;
+
   &.active {
     z-index: 2;
     opacity: 1;
 
     animation: slideSection 1s ease;
+  }
+
+  &.back-section {
+    z-index: 1;
+  }
+}
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 .p-1 {
@@ -91,6 +105,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  transition: all 0.3s ease;
 
   border-right: 1px solid var(--bg-color-50);
 
@@ -150,6 +165,22 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.3s ease;
+
+    &.open {
+      span {
+        background: transparent;
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
 
     span {
       height: 0.2rem;
@@ -887,10 +918,28 @@ body {
 @media screen and (max-width: 1199px) {
   .aside {
     left: -17rem;
+
+    .nav-toggler {
+      display: flex;
+      left: 2rem;
+      top: 1rem;
+
+      &.open {
+        left: 18rem;
+      }
+    }
+    &.open {
+      left: 0;
+    }
   }
-  .main-content {
-    padding-left: 0;
+  .section {
+    left: 0;
+
+    &.open {
+      left: 17rem;
+    }
   }
+
   .about {
     .about-content {
       .personel-info {
