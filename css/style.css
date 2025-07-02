@@ -317,8 +317,8 @@ body {
       width: 3rem;
       border-bottom: 0.5rem solid var(--skin-color);
       border-right: 0.5rem solid var(--skin-color);
-      right: 5.3rem;
-      bottom: -2rem;
+      right: 5.1rem;
+      bottom: 5.6rem;
     }
   }
 }
@@ -833,7 +833,6 @@ body {
     }
   }
 }
-
 @media screen and (max-width: 48rem) {
   .portfolio {
     .portfolio-item {
@@ -862,7 +861,7 @@ body {
     }
   }
 }
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 71rem) {
   .home {
     .home-info {
       flex: 0 0 100%;
@@ -915,7 +914,7 @@ body {
     }
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1410px) {
   .aside {
     left: -17rem;
 
